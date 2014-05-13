@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-ember-plugin' ]; then cd .. && eval "mv $currentfolder generator-ember-plugin" && cd generator-ember-plugin; fi
+
