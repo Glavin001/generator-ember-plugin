@@ -18,6 +18,7 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
   },
 
   askFor: function () {
+    /*
     var done = this.async();
 
     // Have Yeoman greet the user.
@@ -35,12 +36,22 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
 
       done();
     }.bind(this));
+    */
   },
 
   app: function () {
+    // Example app
     this.mkdir('app');
-    this.mkdir('app/templates');
+    this.directory('app','app');
+    // For GitHub Pages, build of example app
+    this.mkdir('dist');
 
+    // Library
+    this.directory('lib','lib');
+    // Pre-Built library for Bower
+    this.mkdir('build');
+
+    // Misc
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
   },
@@ -48,6 +59,9 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
+    this.copy('Gruntfile.js', 'Gruntfile.js');
+    this.copy('gitignore', '.gitignore');
+    this.copy('bowerrc', '.bowerrc');
   }
 });
 
