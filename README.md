@@ -16,6 +16,8 @@ Finally, initiate the generator:
 $ yo ember-plugin
 ```
 
+Then read the newly created `README.md` for instructions.
+
 ## License
 
 MIT
