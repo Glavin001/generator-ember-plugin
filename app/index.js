@@ -42,12 +42,43 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
   app: function () {
     // Example app
     this.mkdir('app');
-    this.directory('app','app');
+    this.copy('app/index.html');
+    // Scripts
+    this.mkdir('app/scripts');
+    this.copy('app/scripts/app.js');
+    this.copy('app/scripts/router.js');
+    this.copy('app/scripts/store.js');
+    this.mkdir('app/scripts/controllers');
+    this.copy('app/scripts/controllers/index_controller.js');
+    this.mkdir('app/scripts/models');
+    this.mkdir('app/scripts/routes');
+    this.copy('app/scripts/routes/index_route.js');
+    this.mkdir('app/scripts/views');
+    this.mkdir('app/scripts/components');
+    this.mkdir('app/scripts/helpers');
+    // Styles
+    this.mkdir('app/styles');
+    this.copy('app/styles/style.scss');
+    // Templates
+    this.mkdir('app/templates');
+    this.copy('app/templates/index.hbs');
+
     // For GitHub Pages, build of example app
     this.mkdir('dist');
 
     // Library
-    this.directory('lib','lib');
+    this.mkdir('lib');
+    this.copy('lib/lib.js');
+    this.mkdir('lib/styles');
+    this.copy('lib/styles/lib.scss');
+    this.mkdir('lib/scripts');
+    this.copy('lib/scripts/index.js');
+    this.mkdir('lib/scripts/controllers');
+    this.mkdir('lib/scripts/models');
+    this.mkdir('lib/scripts/routes');
+    this.mkdir('lib/scripts/views');
+    this.mkdir('lib/scripts/components');
+    this.mkdir('lib/scripts/helpers');
     // Pre-Built library for Bower
     this.mkdir('build');
 
