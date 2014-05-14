@@ -4,7 +4,7 @@ var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
-
+var fleck = require('fleck');
 
 var EmberPluginGenerator = yeoman.generators.Base.extend({
   init: function () {
@@ -18,25 +18,27 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
   },
 
   askFor: function () {
-    /*
+
     var done = this.async();
 
     // Have Yeoman greet the user.
     this.log(yosay('Welcome to the marvelous EmberPlugin generator!'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'rawName',
+      message: 'What would you like to call your Ember Plugin/Library?',
+      default: 'Ember Plugin Example'
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.rawName = props.rawName;
+      this.underscoreName = fleck.underscore(props.rawName.split(' ').join('_'));
+      this.dasherizeName = fleck.dasherize(this.underscoreName);
+      this.camelizeName = fleck.camelize(this.underscoreName);
 
       done();
     }.bind(this));
-    */
+
   },
 
   app: function () {
@@ -68,7 +70,7 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
 
     // Library
     this.mkdir('lib');
-    this.copy('lib/lib.js');
+    this.template('lib/lib.js');
     this.mkdir('lib/styles');
     this.copy('lib/styles/lib.scss');
     this.mkdir('lib/scripts');
@@ -83,8 +85,9 @@ var EmberPluginGenerator = yeoman.generators.Base.extend({
     this.mkdir('build');
 
     // Misc
-    this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
+    this.template('_package.json', 'package.json');
+    this.template('_bower.json', 'bower.json');
+    this.template('README.md');
   },
 
   projectfiles: function () {

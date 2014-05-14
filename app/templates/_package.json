@@ -1,5 +1,5 @@
 {
-  "name": "package",
+  "name": "<%= dasherizeName %>",
   "version": "0.0.0",
   "author": {
     "name": "",

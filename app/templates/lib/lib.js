@@ -1,8 +1,8 @@
 require('build/temp/template');
 
-Ember.Plugin = Ember.Namespace.create();
-Ember.Plugin.VERSION = '0.0.1';
+Ember.<%= camelizeName %> = Ember.Namespace.create();
+Ember.<%= camelizeName %>.VERSION = '0.0.1';
 
-Ember.libraries.register('Ember Plugin', Ember.Plugin.VERSION);
+Ember.libraries.register('<%= rawName %>', Ember.<%= camelizeName %>.VERSION);
 
 require('lib/scripts/index');
