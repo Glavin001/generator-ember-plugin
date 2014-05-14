@@ -25,7 +25,7 @@ describe('ember-plugin generator', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'rawName': 'Ember Plugin Example'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
