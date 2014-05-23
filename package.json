@@ -1,6 +1,6 @@
 {
   "name": "generator-ember-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold the foundation for a new Ember Plugin.",
   "license": "MIT",
   "main": "app/index.js",
