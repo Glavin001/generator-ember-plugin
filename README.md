@@ -18,9 +18,15 @@ $ yo ember-plugin
 
 Then read the newly created `README.md` for instructions.
 
+## Built with `Generator-Ember-Plugin`
+
+Please see the wiki page at
+https://github.com/Glavin001/generator-ember-plugin/wiki/Built-with-Generator-Ember-Plugin
+and add your own if you used `generator-ember-plugin`!
+
 ## License
 
-MIT
+[MIT](https://github.com/Glavin001/generator-ember-plugin/blob/master/LICENSE)
 
 ## Author
 
