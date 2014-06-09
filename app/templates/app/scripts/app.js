@@ -1,10 +1,11 @@
+/* jshint unused: false */
 var App = window.App = Ember.Application.create();
 
 /* Order and include as you please. */
-require('scripts/controllers/*');
-require('scripts/store');
-require('scripts/models/*');
-require('scripts/routes/*');
-require('scripts/views/*');
-require('scripts/components/*');
-require('scripts/router');
+require('app/scripts/controllers/*');
+require('app/scripts/store');
+require('app/scripts/models/*');
+require('app/scripts/routes/*');
+require('app/scripts/views/*');
+require('app/scripts/components/*');
+require('app/scripts/router');

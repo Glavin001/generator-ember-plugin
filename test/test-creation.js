@@ -21,7 +21,9 @@ describe('ember-plugin generator', function () {
     var expected = [
       // add files you expect to exist here.
       '.jshintrc',
-      '.editorconfig'
+      '.editorconfig',
+      'bower.json',
+      'package.json'
     ];
 
     helpers.mockPrompt(this.app, {

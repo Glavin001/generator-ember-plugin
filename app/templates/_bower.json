@@ -13,7 +13,7 @@
   "ignore": [
     "app/",
     "dist/",
-    "lib/",
+    "lib/"
   ],
   "main": ["build/lib.js","build/lib.css"]
 }
