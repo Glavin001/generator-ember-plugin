@@ -10,5 +10,10 @@
   "devDependencies": {
     "ember-mocha-adapter": "0.1.2"
   },
-  "main": "build/ember-plugin.js"
+  "ignore": [
+    "app/",
+    "dist/",
+    "lib/",
+  ],
+  "main": ["build/lib.js","build/lib.css"]
 }
